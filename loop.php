@@ -19,7 +19,6 @@ Posté le <?php the_date(); ?> dans <?php the_category(', '); ?>  <?php the_tags
 </div>
 </div>
 <?php endwhile; ?>
-
 <?php else : ?>
 <p class="nothing">
 Il n'y a pas de Post à afficher !
