@@ -7,14 +7,16 @@
         </div>
         
         <div class="footer-info">
-            <h4>INFORMATIONS</h4>
-            <ul>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="#">Politiques de Confidentialité</a></li>
-                <li><a href="#">Conditions Générales d’Utilisation</a></li>
-            </ul>
-        </div>
+    <h4>INFORMATIONS</h4>
+    <?php
+    wp_nav_menu(array(
+        'theme_location' => 'footer-menu', // L'identifiant de l'emplacement du menu
+        'container'      => false,         // Pas de div container supplémentaire
+        'menu_class'     => '',           // Pas de classe CSS supplémentaire sur le ul
+        'fallback_cb'    => false         // Pas de menu par défaut si aucun n'est défini
+    ));
+    ?>
+</div>
 
         <div class="footer-partners">
             <h4 class="title-footer">PARTENAIRES</h4>
