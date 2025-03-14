@@ -17,7 +17,7 @@
         </div>
 
         <div class="footer-partners">
-            <h4>PARTENAIRES</h4>
+            <h4 class="title-footer">PARTENAIRES</h4>
             <div class="partners-logos">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/societe-generale.png" alt="Société Générale">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/universite-franche-comte.png" alt="Université de Franche-Comté">
