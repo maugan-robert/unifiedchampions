@@ -1,26 +1,28 @@
 <?php
-// vignettes
-add_theme_support( 'post-thumbnail' );
-add_theme_support( 'post-thumbnails' );
-// menus
+// Activer les vignettes pour les articles
+add_theme_support('post-thumbnail');
+add_theme_support('post-thumbnails');
 
-function theme_enqueue_styles() {
+// Charger les styles (Google Fonts et Adobe Fonts)
+function theme_enqueue_styles()
+{
+    // Importer le CSS principal
     wp_enqueue_style('style', get_stylesheet_uri());
+
+    // Importer la police DM Sans depuis Google Fonts
     wp_enqueue_style('dm-sans-font', 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap', false);
 
-function add_adobe_fonts() {
-        // Remplacez abc1234 par votre kit ID Adobe Fonts
-        wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/emz3bcr.css', array(), null);
-    }
-    add_action('wp_enqueue_scripts', 'add_adobe_fonts');
-  }
-  add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
-
-//ajouter une nouvelle zone de menu à mon thème
-function register_my_menu(){
-    register_nav_menus( array(
-        'header-menu' => __( 'Header'),
-        'footer-menu'  => __( 'Footer'),
-    ) );
+    // Importer la police Adobe Fonts (remplacez "emz3bcr" par votre Kit ID)
+    wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/emz3bcr.css', array(), null);
 }
-add_action( 'init', 'register_my_menu', 0 );
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+
+// Ajouter une nouvelle zone de menu au thème
+function register_my_menu()
+{
+    register_nav_menus(array(
+        'header-menu' => __('Header'),
+        'footer-menu' => __('Footer'),
+    ));
+}
+add_action('init', 'register_my_menu', 0);
