@@ -1,3 +1,6 @@
+/* footer */
+
+
 .site-footer {
     background-color: #ffffff;
     padding: 40px 0;
@@ -53,4 +56,12 @@
 .footer-partners .partners-logos img {
     max-height: 40px;
     margin-right: 20px;
+}
+
+
+/* font style & font size */
+
+h4 {
+    font-family: "industry", sans-serif;
+    font-weight: 900;
 }
