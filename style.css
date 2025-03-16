@@ -110,7 +110,17 @@ a {
     .partners-logos {
         flex-direction: column;
     }
+
+    .desktop-menu {
+        display: none;
+      }
 }
-
-
-
+/* Masquer le menu mobile par défaut */
+.mobile-menu {
+    display: none;
+  }
+  
+  /* Masquer le menu burger sur desktop */
+  .burger-menu {
+    display: none;
+  }
