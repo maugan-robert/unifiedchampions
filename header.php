@@ -14,7 +14,7 @@
           <!-- Logo -->
           <div class="logo">
             <a href="<?php echo home_url(); ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/screenshot.jpg" alt="Logo">
+            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/logo-header.webp')); ?>" alt="Logo header">
             </a>
           </div>
 
@@ -25,6 +25,7 @@
                 'theme_location' => 'header-menu',
                 'container' => false,
                 'menu_class' => 'menu-list',
+                'walker' => new Sports_Menu_Walker()
               ));
             ?>
           </nav>
@@ -45,9 +46,15 @@
               'theme_location' => 'header-menu',
               'container' => false,
               'menu_class' => 'mobile-menu-list',
+              'walker' => new Sports_Menu_Walker()
             ));
           ?>
         </nav>
+        <div class="header-social">
+            <a href="#" target="_blank"><img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/mdi_instagram.webp')); ?>" alt="Instagram"></a>
+            <a href="#" target="_blank"><img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/ic_baseline_discord.webp')); ?>" alt="Discord"></a>
+            <a href="#" target="_blank"><img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/ri_twitch_fill.webp')); ?>" alt="Twitch"></a>
+        </div>
       </header>
     </div>
     <?php wp_footer(); ?>

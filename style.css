@@ -114,3 +114,64 @@ a {
 
 
 
+
+
+/*---------------------------------------HEADER------------------------------------------------------------
+  /* Styles pour le menu hover */
+.menu-item-sports {
+    position: relative;
+  }
+  
+  /* Cache le sous-menu par défaut */
+  .menu-item-sports .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 4px;
+    padding: 8px 0;
+  }
+  
+  /* Affiche le sous-menu au survol */
+  .menu-item-sports:hover .sub-menu {
+    display: block;
+  }
+  
+  /* Style des éléments du sous-menu */
+  .menu-item-sports .sub-menu li {
+    padding: 8px 15px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .menu-item-sports .sub-menu li:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .menu-item-sports .sub-menu li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+  }
+  
+  /* Style pour désactiver le clic sur Sports */
+  .menu-item-sports > a {
+    pointer-events: none;
+    cursor: default;
+  }
+  
+  /* Animation douce pour l'apparition du sous-menu */
+  .menu-item-sports .sub-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .menu-item-sports:hover .sub-menu {
+    opacity: 1;
+    transform: translateY(0);
+  }
