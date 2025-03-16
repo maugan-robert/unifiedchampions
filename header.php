@@ -25,6 +25,7 @@
                 'theme_location' => 'header-menu',
                 'container' => false,
                 'menu_class' => 'menu-list',
+                'walker' => new Sports_Menu_Walker()
               ));
             ?>
           </nav>
@@ -45,6 +46,7 @@
               'theme_location' => 'header-menu',
               'container' => false,
               'menu_class' => 'mobile-menu-list',
+              'walker' => new Sports_Menu_Walker()
             ));
           ?>
         </nav>
