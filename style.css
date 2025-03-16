@@ -1,10 +1,29 @@
+/* font style & font size general*/
+
+h1, h2, h3, h4 {
+    font-weight: extra-bold;
+}
+
+html {
+  font-family: 'industry', sans-serif;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+a {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
 /* footer */
 
-
 .site-footer {
-    background-color: #ffffff;
-    padding: 40px 0;
-    border-top: 2px solid #ccc;
+    background-color: #fff;
+    padding: 40px 20px;
 }
 
 .footer-container {
@@ -13,34 +32,29 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 .footer-social {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .footer-social a img {
-    width: 32px;
+    width: 32px; /* Ajuste la taille des icônes */
     height: 32px;
 }
 
-.footer-info, .footer-partners {
-    display: flex;
-    flex-direction: column;
+/* Style du menu */
+.footer-info {
+    text-align: start;
 }
 
-.footer-info h4, .footer-partners h4 {
-    font-size: 14px;
-    font-weight: bold;
-    color: #663366; /* Couleur violette des titres */
-    margin-bottom: 10px;
-}
-
+/* Ajuste les styles du menu WordPress */
 .footer-info ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-info ul li {
@@ -50,18 +64,53 @@
 .footer-info ul li a {
     text-decoration: none;
     color: #000;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-.footer-partners .partners-logos img {
-    max-height: 40px;
-    margin-right: 20px;
+.footer-partners {
+    text-align: start;
+}
+
+.title-footer {
+    color: #6d2b56;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: extra-bold;
+    margin-bottom: 10px;
+}
+
+.partners-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.partners-logos img {
+    max-width: 180px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-info,
+    .footer-partners {
+        text-align: start;
+    }
+
+    .partners-logos {
+        flex-direction: column;
+    }
 }
 
 
-/* font style & font size */
 
-h4 {
-    font-family: "industry", sans-serif;
-    font-weight: 900;
-}
