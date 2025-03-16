@@ -18,6 +18,11 @@ a {
     line-height: 1.5;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* footer */
 
@@ -174,4 +179,31 @@ a {
   .menu-item-sports:hover .sub-menu {
     opacity: 1;
     transform: translateY(0);
+  }
+
+
+
+
+
+/* ---------------------------------------ACCUEIL------------------------------------------------------------- */
+
+.image-jeux-accueil {
+    width: 40%;
+}
+
+
+/* Section Actualités */
+.news-section {
+    margin-bottom: 40px;
+  }
+  
+/* Section Actualités */
+.news-section {
+    margin-bottom: 40px;
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
