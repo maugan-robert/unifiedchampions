@@ -23,28 +23,35 @@ get_header(); ?>
             </div>
         <?php endif; ?>
 
-        <h2>Nos équipes</h2>
-        <div class="game-teams">
-            <?php 
-            // Récupérer les équipes associées
-            $equipes = get_field('equipes');
-            if ($equipes) :
-                foreach ($equipes as $equipe) :
-                    $team_logo = get_field('logo_d_equipe', $equipe->ID); // Suppose que le logo d'équipe est stocké sous un champ ACF nommé 'logo_d_equipe'
-                    ?>
-                    <div class="team-card">
-                        <?php if ($team_logo) : ?>
-                            <img src="<?php echo esc_url($team_logo['url']); ?>" alt="<?php echo esc_attr($team_logo['alt']); ?>">
-                        <?php endif; ?>
-                        <h3><?php echo esc_html(get_the_title($equipe->ID)); ?></h3>
-                    </div>
-                <?php endforeach;
-            else : ?>
-                <p>Aucune équipe pour ce jeu.</p>
-            <?php endif; ?>
-        </div>
+       <section class="teams-section">
+    <h2>Nos Équipes</h2>
+    <span class="trait-noir"></span>
+    <div class="teams-grid">
+        <?php
+        // Récupérer les équipes associées à ce jeu via ACF
+        $equipes = get_field('equipes');
+
+        if ($equipes) :
+            foreach ($equipes as $equipe) :
+                $image_equipe = get_field('logo_d_equipe', $equipe->ID); // Logo de l'équipe
+                $team_link = get_permalink($equipe->ID); // Lien vers la page de l'équipe
+        ?>
+                <a href="<?php echo esc_url($team_link); ?>" class="team-card">
+                    <?php if ($image_equipe) : ?>
+                        <div class="team-image">
+                            <img class="image-equipe" src="<?php echo esc_url($image_equipe['url']); ?>" alt="<?php echo esc_attr($image_equipe['alt']); ?>">
+                        </div>
+                    <?php endif; ?>
+                    <h3><?php echo esc_html(get_the_title($equipe->ID)); ?></h3>
+                </a>
+        <?php
+            endforeach;
+        else :
+            echo "<p>Aucune équipe n'est associée à ce jeu.</p>";
+        endif;
+        ?>
     </div>
-</div>
+</section>
 
  <!-- Section Actualités du jeu -->
 <section class="news-section">
