@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 <main class="single-equipe-page">
+<img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/Logo_Black.webp')); ?>" alt="Logo header">
+<img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/Logo_Black.webp')); ?>" alt="Logo header">
     <div class="equipe-header">
         <h1 class="equipe-title"><?php the_title(); ?></h1>
     </div>
