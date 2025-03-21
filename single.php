@@ -69,7 +69,7 @@ endif;
 
             <!-- Bouton retour aux actus -->
             <div class="back-to-news">
-                <a href="<?php echo site_url('/actualites'); ?>" class="btn">← Retour aux actualités</a>
+                <a href="<?php echo site_url('/actus'); ?>" class="btn">← Retour aux actualités</a>
             </div>
 
         </article>
