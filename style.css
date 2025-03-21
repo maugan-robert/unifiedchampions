@@ -1,10 +1,13 @@
 /* font style & font size general*/
+body {
+    margin: 0;
+}
 
 h1, h2, h3, h4 {
     font-weight: extra-bold;
 }
 
-html {
+html, button {
   font-family: 'industry', sans-serif;
 }
 
@@ -189,17 +192,16 @@ img {
 
 /* ---------------------------------------ACCUEIL------------------------------------------------------------- */
 
-.image-jeux-accueil {
+/* .image-jeux-accueil {
     width: 40%;
 }
 
 
-/* Section Actualités */
+
 .news-section {
     margin-bottom: 40px;
   }
-  
-/* Section Actualités */
+
 .news-section {
     margin-bottom: 40px;
   }
@@ -208,7 +210,7 @@ img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-  }
+  } */
 
 
 
