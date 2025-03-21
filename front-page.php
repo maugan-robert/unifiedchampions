@@ -243,7 +243,7 @@
 
     .games-section {
         text-align: left;
-        padding: 40px 20px;
+        padding: 40px 5vw;
     }
 
     .h2-section {
@@ -398,7 +398,7 @@
 
 
     .news-section {
-        padding: 15vh 20px;
+        padding: 15vh 5vw;
         background-color: #f8f8f8;
     }
 
