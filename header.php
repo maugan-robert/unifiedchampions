@@ -19,10 +19,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding-top: 20px;
+      padding-top: 12vh;
       transform: translateY(-100%);
       transition: transform 0.4s ease-in-out;
       z-index: 1000;
+      gap: 7vh;
     }
 
     .mobile-menu.open {
@@ -35,9 +36,8 @@
       font-size: 1.2em;
       padding: 15px 0;
       display: block;
-      width: 100%;
+      max-width: 100%;
       text-align: center;
-      border-bottom: 1px solid #ddd;
     }
 
     .mobile-menu,
@@ -82,15 +82,17 @@
 
     .desktop-menu {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      max-width: 100%;
+      padding-left: 5vw;
+      padding-right: 5vw;
     }
 
     .desktop-menu a {
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 1.2em;
+      font-size: 16px;
       padding: 15px 0;
       display: block;
       width: 100%;
@@ -103,7 +105,7 @@
       display: block;
       width: 100%;
       height: 3px;
-      background: #5c2a4a;
+      background: rgb(246, 246, 246);
       margin-top: 3px;
     }
 
@@ -112,6 +114,7 @@
       list-style: none;
       padding: 0;
       margin: 0;
+
     }
 
     .menu-list {
@@ -119,19 +122,13 @@
       gap: 30px;
       padding: 0;
       margin: 0;
+
     }
 
     .menu-list li {
       list-style: none;
     }
 
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row;
-      width: 100%;
-    }
 
 
     .header-social {
@@ -139,17 +136,53 @@
       gap: 20px;
     }
 
+    .header-social img {
+      width: 31px;
+      height: auto;
+    }
+
+    .small-logo {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .mobile-menu-list a {
+      border-bottom: 1px solid black;
+      max-width: 100%;
+    }
+
+    .mobile-menu-list {
+      max-width: 100%;
+    }
 
 
-    @media (max-width: 768px) {
+
+    .logo-mobile {
+      display: none;
+    }
+
+    .logo-mobile {
+      display: block;
+    }
+
+
+    @media (min-width: 900px) {
+      .logo-mobile {
+        display: none;
+      }
+    }
+
+    @media (max-width: 900px) {
       .header-content {
-        align-items: flex-start;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
       }
     }
 
 
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .mobile-menu-toggle {
         display: flex;
       }
@@ -166,12 +199,14 @@
   <div class="wrap">
     <header class="site-header">
       <div class="header-content">
+
         <!-- Logo -->
-        <div class="logo">
+        <div class="logo-mobile">
           <a href="<?php echo home_url(); ?>">
-            <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/logo-header.webp')); ?>" alt="Logo header">
+            <img class="small-logo" src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/logo-header.webp')); ?>" alt="Logo header">
           </a>
         </div>
+
 
         <!-- Mobile Menu Button -->
         <button id="mobile-menu-toggle" class="mobile-menu-toggle">
@@ -180,7 +215,14 @@
         </button>
 
         <!-- Desktop Menu -->
+
         <nav class="desktop-menu">
+          <!-- Logo -->
+          <div class="logo">
+            <a href="<?php echo home_url(); ?>">
+              <img class="small-logo" src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/logo-header.webp')); ?>" alt="Logo header">
+            </a>
+          </div>
           <?php
           wp_nav_menu(array(
             'theme_location' => 'header-menu',
@@ -202,6 +244,14 @@
 
       <!-- Mobile Menu -->
       <nav id="mobile-menu" class="mobile-menu">
+
+        <!-- Logo -->
+        <div class="logo-mobile">
+          <a href="<?php echo home_url(); ?>">
+            <img class="small-logo" src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/logo-header.webp')); ?>" alt="Logo header">
+          </a>
+        </div>
+
         <?php
         wp_nav_menu(array(
           'theme_location' => 'header-menu',
