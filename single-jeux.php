@@ -129,15 +129,14 @@
 
     .teams-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        /* Augmente la taille des cartes */
+        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
-        /* Espace entre les cartes */
         margin-top: 7vh;
         margin-bottom: 7vh;
     }
 
     .team-card {
+        grid-column: span 1;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -147,7 +146,12 @@
         padding: 20px;
         transition: transform 0.2s ease-in-out;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* Ajoute une légère ombre */
+    }
+
+    @media (max-width: 768px) {
+        .teams-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     .team-card:hover {
@@ -330,7 +334,7 @@
     }
 
     .discord button:hover {
-        background:rgb(138, 52, 103);
+        background: rgb(138, 52, 103);
     }
 
     .discord img {
