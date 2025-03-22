@@ -68,8 +68,9 @@
     }
 
     .hero-content button:hover {
-        background: rgb(0, 0, 0);
+        background: #742B57;
         color: white;
+        border: 1px solid white;
 
     }
 
@@ -412,7 +413,6 @@
 
     .news-card {
         background: #fff;
-        border-radius: 8px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
