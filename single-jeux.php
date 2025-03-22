@@ -4,7 +4,7 @@
     .game-hero {
         position: relative;
         width: 100%;
-        height: calc(100vh - 101.53px);
+        height: calc(100vh - 123.53px);
         /* Prend toute la hauteur de l'écran */
         display: flex;
         align-items: flex-end;

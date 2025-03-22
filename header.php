@@ -142,7 +142,7 @@
     }
 
     .small-logo {
-      max-width: 200px;
+      width: 200px;
       height: auto;
       padding-top: 15px;
       padding-bottom: 15px;
