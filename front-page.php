@@ -5,7 +5,7 @@
     .hero {
         position: relative;
         width: 100%;
-        height: calc(100vh - 101.53px);
+        height: calc(100vh - 131.53px);
         /* Adjusted height */
         /* Pleine hauteur de l'écran */
         display: flex;
