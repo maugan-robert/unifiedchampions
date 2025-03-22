@@ -144,25 +144,37 @@
     .small-logo {
       max-width: 200px;
       height: auto;
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
 
     .mobile-menu-list a {
-      border-bottom: 1px solid black;
       max-width: 100%;
+      border-bottom: 2px solid rgb(173, 173, 173);
+      text-decoration: none;
+    }
+
+    .mobile-menu-list a:hover {
+      max-width: 100%;
+      border-bottom: 2px solid #742B57;
+      transition: border-bottom 0.3s ease-in;
+      text-decoration: none;
     }
 
     .mobile-menu-list {
       max-width: 100%;
+      text-decoration: none;
+
     }
 
-
-
-    .logo-mobile {
-      display: none;
-    }
 
     .logo-mobile {
       display: block;
+    }
+
+    .logo-mobile a {
+      display: block;
+      padding: 15px 0;
     }
 
 
@@ -177,6 +189,8 @@
         align-items: center;
         display: flex;
         justify-content: space-between;
+        padding-left: 5vw;
+        padding-right: 5vw;
       }
     }
 
@@ -190,6 +204,43 @@
       .desktop-menu {
         display: none;
       }
+    }
+
+
+    .menu-list a {
+      transition: border-bottom 0.3s ease-in;
+    }
+
+    .menu-list a {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu-list a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #742B57;
+      transition: width 0.3s ease-in;
+    }
+
+
+    .menu-list a:hover::after {
+      width: 100%;
+    }
+
+    .menu-list a.active::after,
+    .mobile-menu-list a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #742B57;
     }
   </style>
   <?php wp_head(); ?>
@@ -280,6 +331,24 @@
       mobileMenuToggle.addEventListener('click', function() {
         mobileMenu.classList.toggle('open');
         mobileMenuToggle.classList.toggle('open');
+      });
+
+      const currentUrl = window.location.href;
+      const links = document.querySelectorAll('.menu-list a, .mobile-menu-list a');
+
+      links.forEach(link => {
+        if (link.href === currentUrl) {
+          link.classList.add('active');
+        }
+      });
+
+      const mobileLinks = document.querySelectorAll('.mobile-menu-list a');
+
+      mobileLinks.forEach(link => {
+        if (link.href === currentUrl) {
+          link.classList.add('active');
+          link.style.borderBottom = '2px solid #742B57'; // Add violet border-bottom for active mobile menu link
+        }
       });
     });
   </script>
