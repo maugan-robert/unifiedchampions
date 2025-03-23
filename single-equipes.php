@@ -113,7 +113,7 @@
         display: block;
         width: 15vh;
         height: 3px;
-        background: black;
+        background: #9E2527;
         margin-bottom: 20px;
     }
 
@@ -498,12 +498,14 @@ function lighten_color($hex, $percent)
 
 <script>
     document.querySelectorAll('.equipe-navigation a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth' });
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
         });
     });
