@@ -63,6 +63,7 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
         margin-top: 15vh;
+        margin-bottom: 15vh;
     }
 
     /* 📌 ARTICLES */
