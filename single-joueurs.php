@@ -456,7 +456,7 @@ $image_joueur_2 = get_field('image-joueurs-2');
 
 
     <section class="player-teams">
-        <h2 class="h2-section">Équipes</h2>
+        <h2 class="h2-section">Équipes de <?php echo esc_html($pseudo); ?></h2>
         <span class="trait-noir"></span>
         <?php if ($equipes): ?>
             <?php foreach ($equipes as $equipe): ?>
