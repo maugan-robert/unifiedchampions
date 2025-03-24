@@ -320,7 +320,7 @@
         text-decoration: underline;
     }
 
-    .discord button {
+    .discord a {
         margin-top: 1.5rem;
         padding: 18px 24px;
         background: #742B57;
@@ -333,7 +333,7 @@
         transition: 0.3s;
     }
 
-    .discord button:hover {
+    .discord a:hover {
         background: rgb(138, 52, 103);
     }
 
@@ -495,7 +495,7 @@ get_header(); ?>
     <section class="discord">
         <div>
             <h2>Tu veux faire partie de la <strong>communauté </strong>?</h2>
-            <button>REJOINDRE LE DISCORD</button>
+            <a href="#alaune">EN SAVOIR PLUS</a>
         </div>
         <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/fond_dynamique_jeu.webp')); ?>" alt="fond-dynamique">
     </section>
