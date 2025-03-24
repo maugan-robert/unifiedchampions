@@ -87,6 +87,7 @@
       max-width: 100%;
       padding-left: 5vw;
       padding-right: 5vw;
+      background-color: white;
     }
 
     .desktop-menu a {
@@ -191,6 +192,7 @@
         justify-content: space-between;
         padding-left: 5vw;
         padding-right: 5vw;
+        background-color: white;
       }
     }
 
