@@ -3,8 +3,11 @@
 
 
     .page-header {
-        max-width: 1200px;
-        padding: 15vh 7vw;
+        max-width: 100vw;
+        padding-top: 15vh;
+        padding-bottom: 7vh;
+        padding-left: 7vw;
+        padding-right: 7vw;
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -89,9 +92,89 @@
         }
 
         .page-header {
-            padding: 15vh 0; /* Supprime les padding latéraux */
+            padding: 15vh 0;
+            /* Supprime les padding latéraux */
         }
     }
+
+    /* === Staff Section === */
+    .staff-section {
+        padding: 7vh 7vw;
+        max-width: 100vw;
+        text-align: center;
+    }
+
+    .staff-section h2 {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .staff-section h2::before,
+    .staff-section h2::after {
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 2px;
+        background: #111;
+        margin: 0 10px;
+        vertical-align: middle;
+    }
+
+    .staff-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        justify-items: center;
+        margin-top: 10vh;
+    }
+
+    .staff-card {
+        background: #111;
+        color: #fff;
+        padding: 15px;
+
+        text-align: center;
+        max-width: 260px;
+    }
+
+    .staff-image img {
+        width: 100%;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        object-fit: cover;
+    }
+
+    .staff-role {
+        background: #222;
+        padding: 8px;
+        font-weight: bold;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+
+        .page-header-content-1,
+        .page-header-content-2 {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .page-header-content-1 img,
+        .page-header-content-2 img {
+            width: 100%;
+        }
+
+        .staff-card {
+            max-width: 100%;
+        }
+    }
+ .unified-champions-page{
+    background-color: #FAFAFA;
+ }
 </style>
 
 
