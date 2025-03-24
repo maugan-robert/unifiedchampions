@@ -495,7 +495,7 @@ get_header(); ?>
     <section class="discord">
         <div>
             <h2>Tu veux faire partie de la <strong>communauté </strong>?</h2>
-            <a href="#alaune">EN SAVOIR PLUS</a>
+            <a href="https://discord.gg/uCnvuGDTqu" target="_blank">REJOINDRE LE DISCORD</a>
         </div>
         <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/fond_dynamique_jeu.webp')); ?>" alt="fond-dynamique">
     </section>
