@@ -55,7 +55,7 @@
     }
 
     /* Bouton stylisé */
-    .hero-content button {
+    .hero-content a {
         background: white;
         color: black;
         padding: 15px 30px;
@@ -67,7 +67,7 @@
         transition: background 0.3s ease;
     }
 
-    .hero-content button:hover {
+    .hero-content a:hover {
         background: #742B57;
         color: white;
         border: 1px solid white;
@@ -533,7 +533,7 @@
         text-decoration: underline;
     }
 
-    .discord button {
+    .discord a {
         margin-top: 1.5rem;
         padding: 18px 24px;
         background: #656BFF;
@@ -546,7 +546,7 @@
         transition: 0.3s;
     }
 
-    .discord button:hover {
+    .discord a:hover {
         background: #4a50cc;
     }
 
@@ -585,7 +585,7 @@
         <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/image-accueil.webp')); ?>" alt="Logo header">
         <div class="hero-content">
             <h1><?php echo get_theme_mod('hero_title', 'Bienvenue sur le nouveau site de UNIFIED CHAMPIONS'); ?></h1>
-            <button>EN SAVOIR PLUS</button>
+            <a href="#alaune">EN SAVOIR PLUS</a>
         </div>
 
     </section>
@@ -596,7 +596,7 @@
 
 
 
-    <section class="joueurs-a-la-une">
+    <section id="alaune" class="joueurs-a-la-une">
         <h2>JOUEURS À LA UNE !</h2>
         <div class="joueurs-container">
             <?php
@@ -751,16 +751,25 @@
     <section class="discord">
         <div>
             <h2>Tu veux faire partie de la <strong>communauté </strong>?</h2>
-            <button>REJOINDRE LE DISCORD</button>
+            <a href="https://discord.gg/uCnvuGDTqu" target="_blank">REJOINDRE LE DISCORD</a>
         </div>
         <img src="<?php echo esc_url(home_url('/wp-content/uploads/2025/03/fonddynamique.webp')); ?>" alt="fond-dynamique">
     </section>
 
-
-
-
-
-
-
 </main>
 <?php get_footer(); ?>
+
+<script>
+    document.querySelectorAll('.hero-content a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
