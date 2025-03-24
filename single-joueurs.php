@@ -464,7 +464,7 @@ $image_joueur_2 = get_field('image-joueurs-2');
                     <?php
                     $image_equipe = get_field('logo_d_equipe', $equipe->ID);
                     ?>
-                    <a class="team-card" href="<?php echo get_permalink($equipes[0]->ID); ?>"><img class="image-equipe" src="<?php echo esc_url($image_equipe['url']); ?>" alt="<?php echo esc_attr($image_equipe['alt']); ?>"></a>
+                    <a class="team-card" href="<?php echo get_permalink($equipe->ID); ?>"><img class="image-equipe" src="<?php echo esc_url($image_equipe['url']); ?>" alt="<?php echo esc_attr($image_equipe['alt']); ?>"></a>
 
                     <?php
                     // Récupérer les joueurs liés à cette équipe, en excluant le joueur actuel
