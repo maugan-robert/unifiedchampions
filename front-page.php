@@ -658,6 +658,7 @@
     <!-- Section Jeux -->
     <section class="games-section">
         <h2 class="h2-section">Nos Sports</h2>
+
         <span class="trait-noir"></span>
         <div class="games-grid">
             <?php
@@ -738,7 +739,7 @@
             endif;
             ?>
         </div>
-        <button class="actu-btn">VOIR LES ACTUS</button>
+        <a href="<?php echo site_url('/actus'); ?>" class="actu-btn">Retour aux actualités</a>
     </section>
 
 
