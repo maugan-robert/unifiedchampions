@@ -124,34 +124,61 @@
 
     .staff-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        /* Increased gap for more spacing */
         justify-items: center;
         margin-top: 10vh;
+        max-width: 100%;
+    }
+
+    @media (min-width: 1024px) {
+        .staff-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 
     .staff-card {
         background: #111;
         color: #fff;
         padding: 15px;
-
         text-align: center;
-        max-width: 260px;
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .staff-image {
+        width: 100%;
+        height: 300px;
+        /* Increase image height */
+        overflow: hidden;
+        flex-shrink: 0;
     }
 
     .staff-image img {
         width: 100%;
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
+        height: 100%;
         object-fit: cover;
+    }
+
+    .staff-name {
+        margin: 10px 0 5px;
+        font-size: 18px;
+        font-weight: bold;
     }
 
     .staff-role {
         background: #222;
         padding: 8px;
         font-weight: bold;
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
+        border-radius: 4px;
+        margin-top: 5px;
     }
 
     /* === Responsive === */
@@ -172,9 +199,10 @@
             max-width: 100%;
         }
     }
- .unified-champions-page{
-    background-color: #FAFAFA;
- }
+
+    .unified-champions-page {
+        background-color: #FAFAFA;
+    }
 </style>
 
 
@@ -229,13 +257,12 @@ get_header(); ?>
                         $role = get_field('role');
                 ?>
                         <div class="staff-card">
-
-                            <h3 class="staff-name"><?php the_title(); ?></h3>
-                            <?php if (has_post_thumbnail()) : ?>
-                                <div class="staff-image">
+                            <div class="staff-image">
+                                <?php if (has_post_thumbnail()) : ?>
                                     <?php the_post_thumbnail('medium'); ?>
-                                </div>
-                            <?php endif; ?>
+                                <?php endif; ?>
+                            </div>
+                            <h3 class="staff-name"><?php the_title(); ?></h3>
                             <?php if ($role) : ?>
                                 <div class="staff-role"><?php echo esc_html($role); ?></div>
                             <?php endif; ?>

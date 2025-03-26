@@ -453,6 +453,7 @@
     }
 
     .actu-btn {
+        width: fit-content;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -641,7 +642,7 @@
                 Unified Champions s’est donné un objectif clair : exceller dans toutes ses disciplines et porter fièrement
                 les couleurs de l’université sur les plus grandes scènes.
             </p>
-            <a href="#" class="btn-decouvrir">DÉCOUVRIR</a>
+            <a href="<?php echo site_url('/unified-champions'); ?>" class="btn-decouvrir">DÉCOUVRIR</a>
         </div>
 
         <div class="equipe-image">
@@ -739,7 +740,7 @@
             endif;
             ?>
         </div>
-        <a href="<?php echo site_url('/actus'); ?>" class="actu-btn">Retour aux actualités</a>
+        <a href="<?php echo site_url('/actus'); ?>" class="actu-btn">Voir les actualités</a>
     </section>
 
 

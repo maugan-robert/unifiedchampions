@@ -1,5 +1,9 @@
 <style>
     /* Styles généraux */
+    body {
+        background-color: #FAFAFA;
+    }
+
     .contact-page {
         margin: 4rem;
     }

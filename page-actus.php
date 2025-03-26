@@ -277,8 +277,9 @@ get_header(); ?>
     <!-- Pagination -->
     <div class="pagination">
         <?php
+        global $wp_query; // Utilisez la variable globale si vous travaillez avec la boucle principale.
         echo paginate_links(array(
-            'total'   => $query->max_num_pages,
+            'total'   => isset($other_query) ? $other_query->max_num_pages : $wp_query->max_num_pages, // Utilisez $other_query ou $wp_query selon le contexte.
             'current' => max(1, get_query_var('paged')),
             'format'  => '?paged=%#%',
             'prev_text' => '«',
