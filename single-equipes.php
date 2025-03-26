@@ -347,6 +347,7 @@
     <section class="equipe-header">
         <?php
         // Récupérer la couleur de l'équipe
+        $equipe = get_queried_object(); // Retrieve the current post object
         $equipes = get_field('equipes');
         $couleur_equipe = get_field('couleur-equipe', $equipe->ID);
         $couleur_equipe_claire = lighten_color($couleur_equipe, 30); // Éclaircir de 30%
